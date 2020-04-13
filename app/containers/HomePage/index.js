@@ -1,7 +1,7 @@
 /*
  * HomePage
  *
- * This is the first thing users see of our App, at the '/' route
+ * This is the first thing users see of our App, at the '/' route b
  *
  */
 
