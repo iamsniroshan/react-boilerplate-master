@@ -1,6 +1,6 @@
 /**
  *
- * Tests for Navigation
+ * Tests for NavigationContainer
  *
  * @see https://iamsniroshan.blogspot.com/2020/02/react-unit-testing.html
  *
@@ -11,15 +11,16 @@ import { render } from 'react-testing-library';
 import { IntlProvider } from 'react-intl';
 // import 'jest-dom/extend-expect'; // add some helpful assertions
 
-import Navigation from '../index';
+import { NavigationContainer } from '../index';
 import { DEFAULT_LOCALE } from '../../../i18n';
 
-describe('<Navigation/>', () => {
+describe('<NavigationContainer/>', () => {
   it('Expect to not log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
+    const dispatch = jest.fn();
     render(
       <IntlProvider locale={DEFAULT_LOCALE}>
-        <Navigation />
+        <NavigationContainer dispatch={dispatch} />
       </IntlProvider>,
     );
     expect(spy).not.toHaveBeenCalled();
@@ -39,7 +40,7 @@ describe('<Navigation/>', () => {
       container: { firstChild },
     } = render(
       <IntlProvider locale={DEFAULT_LOCALE}>
-        <Navigation />
+        <NavigationContainer />
       </IntlProvider>,
     );
     expect(firstChild).toMatchSnapshot();

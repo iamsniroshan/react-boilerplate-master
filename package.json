@@ -1,7 +1,7 @@
 {
   "name": "react-boilerplate",
   "version": "4.0.0",
-  "description": "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
+  "description": "A highly scalable ReactJS project best practices",
   "repository": {
     "type": "git",
     "url": "git://github.com/iamsniroshan/react-boilerplate-master.git"
@@ -27,7 +27,6 @@
     "start:production": "npm run test && npm run build && npm run start:prod",
     "start:prod": "cross-env NODE_ENV=production node server",
     "presetup": "npm i chalk shelljs",
-    "setup": "node ./internals/scripts/setup.js",
     "clean:all": "npm run analyze:clean && npm run test:clean && npm run build:clean",
     "generate": "plop --plopfile internals/generators/index.js",
     "lint": "npm run lint:js && npm run lint:css",
